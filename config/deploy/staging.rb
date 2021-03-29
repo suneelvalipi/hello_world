@@ -22,10 +22,7 @@
  # role :db,  %w{deploy@example.com}
 
 
- role :app, %w{deploy@example.com}
- role :web, %w{user1@primary.com user2@additional.com}
- role :db,  %w{deploy@example.com}
-
+ 
 
 
 # Configuration
@@ -51,11 +48,7 @@
 #    forward_agent: false,
 #    auth_methods: %w(password)
 #  }
-set :ssh_options, {
-    keys: %w(/home/user_name/.ssh/id_rsa),
-    forward_agent: false,
-    auth_methods: %w(password)
-  }
+
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------

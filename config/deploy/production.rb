@@ -21,7 +21,9 @@
 # role :web, %w{user1@primary.com user2@additional.com}, other_property: :other_value
 # role :db,  %w{deploy@example.com}
 
-
+role :app, %w{13.232.4.60}
+ role :web, %w{13.232.4.60}
+ role :db,  %w{13.232.4.60}
 
 # Configuration
 # =============
@@ -59,3 +61,8 @@
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
+set :ssh_options, {
+    keys: %w(/mnt/c/Users/Suneel/Downloads/suneel-testing.pem -l ubuntu 13.232.4.60 ),
+    forward_agent: false,
+    auth_methods: %w(sunil)
+  } 

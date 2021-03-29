@@ -17,8 +17,15 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+
+  database: hello_world_development
   username: suneel
   password: suneel
+  # host: localhost
+  # port: 5432
+  # pool: 10
+  # timeout: 5000
+  # template: template0
   
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
@@ -26,7 +33,7 @@ default: &default
 
 development:
   <<: *default
-  database: hello_world_development
+  
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -58,9 +65,9 @@ development:
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
-test:
-  <<: *default
-  database: hello_world_test
+# test:
+#   <<: *default
+#   database: hello_world_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -84,5 +91,5 @@ test:
 production:
   <<: *default
   database: hello_world_production
-  username: hello_world
+  username: suneel
   password: <%= ENV['HELLO_WORLD_DATABASE_PASSWORD'] %>
